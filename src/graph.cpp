@@ -24,6 +24,11 @@ void Node::RemoveDistance(int node)
 	nodeDistances.erase(node);
 }
 
+void Node::UpdateDistance(int nodeNumber, int distance)
+{
+	nodeDistances.emplace(make_pair(nodeNumber, distance));
+}
+
 /* Graph Implementation */
 
 Graph::Graph()
@@ -36,9 +41,15 @@ Graph::Graph()
 	FindFastestRoute();
 }
 
-void Graph::AddNode(const Node& node)
+void Graph::AddNode(Node& node)
 {
-	nodes.insert_or_assign(++numNodes, node);
+	++numNodes;
+	for (auto& [number, nodeGraph] : nodes)
+	{
+		nodeGraph.UpdateDistance(numNodes, (node.GetDistances())[number]);
+	}
+
+	nodes.insert_or_assign(numNodes, node);
 
 	cout << "Recalculating Fastest Path \n";
 	FindFastestRoute();

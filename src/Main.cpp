@@ -83,6 +83,7 @@ int main()
 					}
 
 					nodeDistances[number] = distance;
+					++i;
 				}
 
 				//when a distance value is 0
@@ -90,7 +91,7 @@ int main()
 					continue;
 
 				//implicit initialization
-				graph->AddNode(nodeDistances); 
+				graph->AddNode(Node(nodeDistances)); 
 
 			}
 			else if (command == "delete")

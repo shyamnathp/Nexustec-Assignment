@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <CustomBuild Include="E:\nexustec_assignment\build\CMakeFiles\c8ea03d7dc7489757f8e00eae14370f3\generate.stamp.rule">
       <Filter>CMake Rules</Filter>

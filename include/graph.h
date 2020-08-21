@@ -24,6 +24,8 @@ public:
 	//This function is used to remove the corresponding entry from nodeDistances when the node at 'position' is deleted
 	void RemoveDistance(int node);
 
+	void UpdateDistance(int nodeNumber, int distance);
+
 	//Returns nodeDistances
 	map<int, int> GetDistances() const;
 
@@ -42,7 +44,7 @@ public:
 	Graph();
 
 	//Adds a node to the graph and recalculates the fastest route
-	void AddNode(const Node& node);
+	void AddNode(Node& node);
 
 	//Deletes a node based on nodeNumber and recalculates the fastest route
 	void DeleteNode(int nodeNumber);

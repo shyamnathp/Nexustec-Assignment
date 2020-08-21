@@ -1,0 +1,10 @@
+^E:\NEXUSTEC_ASSIGNMENT\BUILD\CMAKEFILES\C8EA03D7DC7489757F8E00EAE14370F3\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/nexustec_assignment -BE:/nexustec_assignment/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/nexustec_assignment/build/nexustec_project.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
